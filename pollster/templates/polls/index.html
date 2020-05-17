@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  <h1 class="text-center mb-3">เคสซิลิโคน iphone 6 6s 7 7plus 8 plus X Xr Xs</h1>
+  {% if latest_question_list %}
+    {% for question in latest_question_list %}
+      <div class="card mb-3">
+        <div class="card-body">
+              <p class="display-5">วัสดุ: TPU</p>
+              <p class="display-5">ฟังก์ชั่น: ทนสกปรก; ป้องกันรอยขีดข่วน</p>
+            
+            
+
+          <a href="{% url 'polls:detail' question.id %}" class="btn btn-primary btn-sm">ให้คะแนน</a>
+          <a href="{% url 'polls:results' question.id %}" class="btn btn-secondary btn-sm">ดูคะแนนทั้งหมด</a>
+
+          </div>
+              <img src="https://th-test-11.slatic.net/p/404113e034c977346d2ec1f4bd9a45ac.jpg_340x340q80.jpg_.webp"width="540">
+          </div>
+            
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No polls available</p>
+  {% endif %}
+{% endblock %}
