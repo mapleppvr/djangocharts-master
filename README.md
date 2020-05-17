@@ -1,2 +1,2 @@
-# djangocharts-master
+# django
 django project
